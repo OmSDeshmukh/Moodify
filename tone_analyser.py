@@ -15,9 +15,10 @@ def get_emotion(conversation):
     keys = list(emotion_scores.keys())
     values = list(emotion_scores.values())
     sorted_value_index = np.argsort(values)
+    return keys[sorted_value_index[-1]] # returning the best mood for now
     sorted_value_index = sorted_value_index[::-1]
     sorted_dict = {keys[i]: values[i] for i in sorted_value_index}
     del sorted_dict['others']
     print(sorted_dict)
     
-get_emotion("i am not very angry")
+# print(get_emotion("How are you? I am very happy!"))
