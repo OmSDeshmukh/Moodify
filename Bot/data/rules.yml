@@ -1,0 +1,45 @@
+version: "2.0"
+
+rules:
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Ask for mood when music recommendation is requested
+  steps:
+  - intent: music_recommendation
+  - action: utter_ask_mood
+
+- rule: When mood given
+  steps:
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+
+- rule: Handle affirmation for music recommendation
+  steps:
+  - intent: affirm
+  - action: utter_music_recommendation
+  - action: action_recommend_tracks
+
+- rule: Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+############ New ones
+- rule: Handle negative response to music recommendation
+  steps:
+  - intent: deny
+  - action: utter_acknowledge
+
+- rule: Handle thank you
+  steps:
+  - intent: thankyou
+  - action: utter_you_are_welcome
+
+# - rule: Handle confusion
+#   steps:
+#   - intent: confusion
+#   - action: utter_help

@@ -41,7 +41,7 @@ except Exception as e:
 #     print(f"Artists: {', '.join([artist['name'] for artist in track['artists']])}")
 #     print(f"Preview URL: {track['preview_url']}")
 
-def mood_genre_mapping(emotion):
+def get_tracks(emotion):
     recommended_songs = []
 
     # Define genre mappings for each emotion

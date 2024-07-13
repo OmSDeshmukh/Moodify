@@ -1,0 +1,60 @@
+# setting what all the model can do
+
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood #mood and hence recommend music
+  - music_recommendation
+  - thankyou
+
+# i don't think we need the bot to keep track of the mood
+entities:
+  - mood
+  # - name may be we can use this
+
+slots:
+  mood:
+    type: text
+    mappings:
+      - type: from_text
+        entity: mood
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you?"
+
+  utter_ask_mood: # can be used when user directly asks for music recommendation
+    - text: "Could you tell me more about your mood?"
+
+  utter_music_recommendation:
+    - text: "I have some music recommendations for you based on your mood."
+
+  utter_goodbye:
+    - text: "Goodbye! Enjoy your music!"
+
+  utter_iamabot:
+  - text: "I am TravisScott, Music Recommendation ChatBot."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_can_i_recommend_music:
+  - text: "Can I recommend some music suiting you mood today?"
+
+  utter_acknowledge:
+  - text: "I aknowledge you denying"
+
+  utter_you_are_welcome:
+  - text: "Your welcome"
+
+actions:
+  - action_analyze_tone_and_fetch_music
+  - action_recommend_tracks
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: True

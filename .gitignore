@@ -1,3 +1,6 @@
 .venv/
 .env
-.cache
+*.cache
+Bot/.rasa/
+*__pycache__/
+*models/

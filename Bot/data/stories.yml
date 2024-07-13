@@ -1,0 +1,86 @@
+# training examples for understanding conversational flow
+# these examples have to be created using the rules only
+version: "3.1"
+
+stories:
+
+- story: chit-chat path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+  - intent: affirm
+  - action: utter_music_recommendation
+  - action: action_recommend_tracks
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+############ new ones
+- story: Recommend music based on explicit request
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: music_recommendation
+  - action: utter_ask_mood
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+  - intent: affirm
+  - action: utter_music_recommendation
+  - action: action_recommend_tracks
+  - intent: thankyou
+  - action: utter_you_are_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Handle mood and recommend when asked
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+  - intent: affirm
+  - action: utter_music_recommendation
+  - action: action_recommend_tracks
+  - intent: thankyou
+  - action: utter_you_are_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Handle mood without recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+  - intent: deny
+  - action: utter_acknowledge
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommend music on follow-up
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood
+  - action: action_analyze_tone_and_fetch_music
+  - action: utter_can_i_recommend_music
+  - intent: affirm
+  - action: utter_music_recommendation
+  - action: action_recommend_tracks
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - story: Handle confusion and provide help
+#   steps:
+#   - intent: confusion
+#   - action: utter_help
+#   - intent: thankyou
+#   - action: utter_you_are_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
