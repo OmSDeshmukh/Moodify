@@ -2,9 +2,8 @@ import streamlit as st
 import json
 import random
 
-from songs import mood_genre_mapping
-from tone_analyser import get_emotion
-
+from utils.songs import mood_genre_mapping
+from utils.tone_analyser import get_emotion
 
 
 # Function to display recommendations

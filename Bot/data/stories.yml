@@ -17,8 +17,6 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-
-############ new ones
 - story: Recommend music based on explicit request
   steps:
   - intent: greet
@@ -76,11 +74,128 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-# - story: Handle confusion and provide help
+# New stories
+
+# - story: Recommend specific genre
 #   steps:
-#   - intent: confusion
-#   - action: utter_help
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: genre_recommendation
+#   - action: utter_ask_genre
+#   - intent: provide_genre
+#   - action: action_fetch_genre_tracks
 #   - intent: thankyou
 #   - action: utter_you_are_welcome
 #   - intent: goodbye
 #   - action: utter_goodbye
+
+# - story: Handle bot capabilities question
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: bot_capabilities
+#   - action: utter_bot_capabilities
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: Handle follow-up questions
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: ask_lyrics
+#   - action: action_fetch_lyrics
+#   - intent: thankyou
+#   - action: utter_you_are_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: User asks for artist info after recommendation
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: ask_artist_info
+#   - action: action_fetch_artist_info
+#   - intent: thankyou
+#   - action: utter_you_are_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: User asks for album info after recommendation
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: ask_album_info
+#   - action: action_fetch_album_info
+#   - intent: thankyou
+#   - action: utter_you_are_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: Handle user asking for bot's favorite music
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: bot_favorite
+#   - action: utter_bot_favorite
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: Handle user asking for help
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_help
+#   - action: utter_help
+#   - intent: music_recommendation
+#   - action: utter_ask_mood
+#   - intent: mood
+#   - action: action_analyze_tone_and_fetch_music
+#   - action: utter_can_i_recommend_music
+#   - intent: affirm
+#   - action: utter_music_recommendation
+#   - action: action_recommend_tracks
+#   - intent: thankyou
+#   - action: utter_you_are_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
+

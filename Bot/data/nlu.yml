@@ -92,3 +92,127 @@ nlu:
     - Can you recommend some music?
     - I need music suggestions
     - Suggest some tracks for me
+
+
+  # new
+- intent: confusion
+  examples: |
+    - I don't understand
+    - I'm confused
+    - can you explain that
+    - what do you mean
+    - I'm not sure
+    - that doesn't make sense
+    - can you clarify
+
+- intent: feedback
+  examples: |
+    - I like this song
+    - this track is great
+    - I don't like this song
+    - this isn't my style
+    - this music is perfect
+    - this isn't what I wanted
+    - this track is awesome
+    - I'm not a fan of this
+
+- intent: more_recommendations
+  examples: |
+    - can you suggest more songs
+    - give me more recommendations
+    - I want more music suggestions
+    - suggest another track
+    - recommend more music
+    - more songs please
+    - what else can you suggest
+    - another recommendation please
+
+- intent: bot_capabilities
+  examples: |
+    - what can you do
+    - what are your capabilities
+    - how can you help me
+    - tell me what you can do
+    - what are your skills
+    - how do you work
+    - what services do you provide
+    - can you tell me about your features
+
+- intent: genre_recommendation
+  examples: |
+    - recommend me some rock music
+    - I want to listen to jazz
+    - suggest me a pop song
+    - give me a classical music recommendation
+    - I need some hip-hop tracks
+    - can you suggest a blues song
+    - recommend some electronic music
+    - I want some country music
+
+- intent: provide_genre
+  examples: |
+    - rock
+    - pop
+    - jazz
+    - classical
+    - hip-hop
+    - blues
+    - electronic
+    - country
+    - reggae
+    - metal
+
+- intent: ask_help
+  examples: |
+    - I need help
+    - can you assist me
+    - help me please
+    - how do I use this
+    - I'm not sure what to do
+    - can you help
+    - I need some assistance
+    - I'm lost
+
+- intent: bot_favorite
+  examples: |
+    - what's your favorite music
+    - do you have a favorite song
+    - what's your favorite track
+    - what's your favorite genre
+    - tell me your favorite music
+    - do you like any songs
+    - what's your favorite artist
+    - do you have a favorite album
+
+- intent: ask_lyrics
+  examples: |
+    - can you show me the lyrics
+    - I want the lyrics to this song
+    - show me the lyrics
+    - give me the lyrics
+    - can you find the lyrics for me
+    - what are the lyrics to this song
+    - I need the lyrics
+    - find the lyrics for this track
+
+- intent: ask_artist_info
+  examples: |
+    - tell me about the artist
+    - who is the artist
+    - give me information about the artist
+    - I want to know about the artist
+    - can you tell me about the artist
+    - who sings this song
+    - who is the singer
+    - tell me about the musician
+
+- intent: ask_album_info
+  examples: |
+    - tell me about the album
+    - what album is this song from
+    - give me information about the album
+    - I want to know about the album
+    - can you tell me about the album
+    - what album is this track on
+    - which album is this song in
+    - tell me about this album

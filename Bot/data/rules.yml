@@ -28,7 +28,6 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-############ New ones
 - rule: Handle negative response to music recommendation
   steps:
   - intent: deny
@@ -39,7 +38,60 @@ rules:
   - intent: thankyou
   - action: utter_you_are_welcome
 
+
+# New rules to expand the conversation
 # - rule: Handle confusion
 #   steps:
 #   - intent: confusion
 #   - action: utter_help
+
+# - rule: Handle user feedback on music recommendation
+#   steps:
+#   - intent: feedback
+#   - action: utter_thank_feedback
+
+# - rule: Handle request for more recommendations
+#   steps:
+#   - intent: more_recommendations
+#   - action: action_recommend_more_tracks
+
+# - rule: Handle user asking about bot capabilities
+#   steps:
+#   - intent: bot_capabilities
+#   - action: utter_bot_capabilities
+
+# - rule: Handle user asking for specific genre recommendation
+#   steps:
+#   - intent: genre_recommendation
+#   - action: utter_ask_genre
+#   - action: action_recommend_genre_tracks
+
+# - rule: Handle user providing genre
+#   steps:
+#   - intent: provide_genre
+#   - action: action_fetch_genre_tracks
+
+# - rule: Handle user asking for help
+#   steps:
+#   - intent: ask_help
+#   - action: utter_help
+
+# - rule: Handle user asking for bot's favorite music
+#   steps:
+#   - intent: bot_favorite
+#   - action: utter_bot_favorite
+
+# - rule: Handle user asking for lyrics of recommended track
+#   steps:
+#   - intent: ask_lyrics
+#   - action: action_fetch_lyrics
+
+# - rule: Handle user asking for artist information
+#   steps:
+#   - intent: ask_artist_info
+#   - action: action_fetch_artist_info
+
+# - rule: Handle user asking for album information
+#   steps:
+#   - intent: ask_album_info
+#   - action: action_fetch_album_info

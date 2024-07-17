@@ -7,8 +7,8 @@ from rasa_sdk.events import SlotSet
 import sys 
 
 sys.path.append("/Users/omdeshmukh/Downloads/MachineLearning/Projects/Moodify")
-from songs import get_tracks
-from tone_analyser import get_emotion
+from utils.songs import get_tracks
+from utils.tone_analyser import get_emotion
 
 global tracks
 tracks = []

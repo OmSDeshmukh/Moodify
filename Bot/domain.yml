@@ -10,6 +10,17 @@ intents:
   - mood #mood and hence recommend music
   - music_recommendation
   - thankyou
+  - confusion
+  - feedback
+  - more_recommendations
+  - bot_capabilities
+  - genre_recommendation
+  - provide_genre
+  - ask_help
+  - bot_favorite
+  - ask_lyrics
+  - ask_artist_info
+  - ask_album_info
 
 # i don't think we need the bot to keep track of the mood
 entities:
@@ -28,28 +39,44 @@ responses:
     - text: "Hello! How can I help you?"
 
   utter_ask_mood: # can be used when user directly asks for music recommendation
-    - text: "Could you tell me more about your mood?"
+    - text: "Sure! Can you tell me how you're feeling right now?"
 
   utter_music_recommendation:
-    - text: "I have some music recommendations for you based on your mood."
+    - text: "Here are some tracks you might like:"
 
   utter_goodbye:
     - text: "Goodbye! Enjoy your music!"
 
-  utter_iamabot:
-  - text: "I am TravisScott, Music Recommendation ChatBot."
+  # utter_iamabot:
+  # - text: "I am TravisScott, Music Recommendation ChatBot."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  # utter_did_that_help:
+  # - text: "Did that help you?"
 
   utter_can_i_recommend_music:
-  - text: "Can I recommend some music suiting you mood today?"
+  - text: "Can I recommend some music based on your mood?"
 
   utter_acknowledge:
   - text: "I aknowledge you denying"
 
   utter_you_are_welcome:
   - text: "Your welcome"
+
+  utter_help:
+  - text: "I'm here to recommend music based on your mood. You can ask me for music recommendations, information about songs, artists, or albums."
+
+  utter_thank_feedback:
+  - text: "Thank you for your feedback!"
+
+  utter_bot_capabilities:
+  - text: "I can recommend music based on your mood, provide lyrics, and information about artists or albums."
+
+  utter_ask_genre:
+  - text: "What genre are you interested in?"
+  
+  utter_bot_favorite:
+  - text: "I don't have personal preferences, but I can recommend popular tracks."
+
 
 actions:
   - action_analyze_tone_and_fetch_music

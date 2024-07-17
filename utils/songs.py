@@ -6,7 +6,7 @@ import os
 from pprint import pprint
 import json
 
-from tone_analyser import get_emotion
+from utils.tone_analyser import get_emotion
 
 # Load environment variables from .env file
 load_dotenv()
